@@ -1,8 +1,15 @@
 # savify
 Python script(s) to archive your Spotify Discover weekly's
+![image](https://github.com/user-attachments/assets/bfd5a88c-24de-4aca-922d-0838d35475cf)
+
 
 This repo includes multiple files where the script functions differently depending on the use case. A short description per case will be provided below.
 Note: "Discover Weekly" playlist no longer seem accessible through the Spotify API anymore, hence a decision was made to create scraping methods to solve this issue and then query for the song name + artist after that.
+
+Tip: As each week a new playlist will be created, it could be useful to create a "folder" in spotify to place these in. The moving to the folder would have to be done manually due to this not being possible through Spotify's API.
+The benefit of this is that it will allow you to play all playlists as if it's a single playlist while keeping it organized.
+![image](https://github.com/user-attachments/assets/b7941706-67cd-4d25-9edd-9bc6830912bb)
+
 
 ## savify_scheduler
 This version was originally made to basically just run and execute the tasks using the schedule library. This is **not** suitable for if you don't plan on having the app running actively, use any other type of task scheduler or manually want to execute the tasks of archiving this weeks Discover Weekly.
@@ -28,3 +35,5 @@ Some general steps for getting this to work on pythonanywhere are:
    - `pip install python-dotenv`
    - `pip install beautifulsoup4`
 - Run the savify_single.py to confirm if it works. If that's done, you can create a task to run it on specific moments through the "Task" tab
+
+Alternatively you could also run the script upon PC startup, as it will just exit if there is already a Discover Weekly archived for the week. As long as you start your PC at least once a week it will work perfectly fine.
