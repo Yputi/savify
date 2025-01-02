@@ -2,7 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
 
@@ -66,8 +66,15 @@ def get_discover_weekly_tracks(client, public_playlist_url):
 
 # Determine the date of the archived Discover Weekly playlist
 def get_discover_weekly_date():
-    created_date = datetime.now()
-    return created_date.strftime("%d-%m-%y")
+    today = datetime.now()
+    
+    # Calculate how many days to subtract to get the most recent Monday (weekday() returns 0 for Monday)
+    # today.weekday() for example returns 0 for Monday, 1 for Tuesday, etc.
+    days_to_subtract = today.weekday()
+    last_monday = today - timedelta(days=days_to_subtract)
+
+    # Format the date as dd-mm-yy
+    return last_monday.strftime("%d-%m-%y")
 
 # Centralized function for playlist naming
 def get_playlist_name():
