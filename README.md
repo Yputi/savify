@@ -1,5 +1,6 @@
 # savify
 Python script(s) to archive your Spotify Discover weekly's
+
 ![image](https://github.com/user-attachments/assets/bfd5a88c-24de-4aca-922d-0838d35475cf)
 
 
@@ -8,6 +9,7 @@ Note: "Discover Weekly" playlist no longer seem accessible through the Spotify A
 
 Tip: As each week a new playlist will be created, it could be useful to create a "folder" in spotify to place these in. The moving to the folder would have to be done manually due to this not being possible through Spotify's API.
 The benefit of this is that it will allow you to play all playlists as if it's a single playlist while keeping it organized.
+
 ![image](https://github.com/user-attachments/assets/b7941706-67cd-4d25-9edd-9bc6830912bb)
 
 
