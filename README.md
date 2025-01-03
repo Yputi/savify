@@ -38,8 +38,8 @@ Some general steps for getting this to work on pythonanywhere are:
    - `pip install beautifulsoup4`
 - Run the savify_single.py to confirm if it works. If that's done, you can create a task to run it on specific moments through the "Task" tab
 
-Alternatively you could also create a scheduled task on your own PC:
-https://learn.microsoft.com/en-us/windows/win32/taskschd/starting-an-executable-weekly
+Alternatively you could also create a scheduled task on your own PC: https://learn.microsoft.com/en-us/windows/win32/taskschd/starting-an-executable-weekly
+
 It's recommended to:
 - Create a .bat file to execute the savify_single.py file, which you can then refer to in your action for the scheduled task
 - Set the "Start in (optional)" to the directory your savify_single.py is located
