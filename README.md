@@ -38,4 +38,10 @@ Some general steps for getting this to work on pythonanywhere are:
    - `pip install beautifulsoup4`
 - Run the savify_single.py to confirm if it works. If that's done, you can create a task to run it on specific moments through the "Task" tab
 
-Alternatively you could also run the script upon PC startup, as it will just exit if there is already a Discover Weekly archived for the week. As long as you start your PC at least once a week it will work perfectly fine.
+Alternatively you could also create a scheduled task on your own PC:
+https://learn.microsoft.com/en-us/windows/win32/taskschd/starting-an-executable-weekly
+It's recommended to:
+- Create a .bat file to execute the savify_single.py file, which you can then refer to in your action for the scheduled task
+- Set the "Start in (optional)" to the directory your savify_single.py is located
+- Set the weekly trigger on Monday, but consider putting the time a few hours after 00:00 incase of delays or it being updated for you differently
+- Enable "Run task as soon as possible after a scheduled start is missed" so it will just start whenever you log in starting from that set schedule
