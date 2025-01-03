@@ -18,7 +18,7 @@ This version will perform the archiving task only once when starting the app. Th
 ---
 **Windows Task Scheduler**
 
-You could also create a scheduled task on your own PC: https://learn.microsoft.com/en-us/windows/win32/taskschd/starting-an-executable-weekly
+You could create a scheduled task on your own PC: https://learn.microsoft.com/en-us/windows/win32/taskschd/starting-an-executable-weekly
 
 Just keep in mind you will roughly have to follow these steps first:
 - Download/copy savify_single.py first
@@ -33,6 +33,13 @@ For the task scheduler, it's recommended to:
 - Set the "Start in (optional)" to the directory your savify_single.py is located
 - Set the weekly trigger on Monday, but consider putting the time a few hours after 00:00 incase of delays or it being updated for you differently
 - Enable "Run task as soon as possible after a scheduled start is missed" so it will just start whenever you log in starting from that set schedule
+
+Example of .bat (as long as you have set the "Start in" this should work):
+```
+@echo off
+python savify_single.py
+pause
+```
 ---
 **pythonanywhere**
 
